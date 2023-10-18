@@ -2,13 +2,13 @@ from django.db import models
 
 # Create your models here.
 
-class register(models.Model):
+class usuario(models.Model):
+    tipoID = models.CharField(max_length=2)
+    numeroID = models.BigIntegerField()
     nombre = models.CharField(max_length=250)
     apellido = models.CharField(max_length=250)
-    numId = models.BigIntegerField()
-    username = models.CharField(max_length=50)
-    password = models.CharField(max_length=80)
-
-class login(models.Model):
-    username = models.CharField(max_length=50)
-    password = models.CharField(max_length=80)
+    genero = models.CharField(max_length=10)
+    rol = models.CharField(max_length=10)
+    correo = models.CharField(max_length=100)
+    usuario = models.CharField(max_length=50)
+    contrasenia = models.CharField(max_length=80)

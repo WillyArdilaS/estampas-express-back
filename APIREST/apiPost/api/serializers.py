@@ -1,13 +1,13 @@
 from rest_framework.serializers import ModelSerializer
-from apiPost.models import register,login
+from apiPost.models import usuario
 
 class registerSerializer(ModelSerializer):
     class Meta:
-        model = register
-        fields = ['id', 'nombre', 'apellido','numId','username','password']
+        model = usuario
+        fields = ['tipoID', 'numeroID', 'nombre', 'apellido','genero', 'rol', 'correo', 'usuario', 'contrasenia']
 
 class loginSerializer(ModelSerializer):
     class Meta:
-        model = login
-        fields = ['id','username','password']
+        model = usuario
+        fields = ['id', 'usuario', 'contrasenia', 'rol']
 
